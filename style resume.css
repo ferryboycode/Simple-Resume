@@ -1,0 +1,82 @@
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-color: blanchedalmond;
+    font-size: 101%;
+}
+
+
+#movingBox {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    right: 600px;
+    animation-name: movingBox;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
+}
+
+@keyframes movingBox {
+    0% {transform: rotate(0deg) translateX(200px) rotate(0deg); background-color: black;}
+    100% {transform: rotate(360deg) translateX(200px) rotate(-360deg); opacity: 20%; background-color: chocolate;}
+}
+
+#droppingMove {
+    border: solid 2px;
+    padding: 1px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 600px;
+}
+
+#droppingMove:active {
+    border: solid 2px;
+    padding: 1px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: dropMove;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    position: absolute;
+    left: 600px;
+    background: linear-gradient(red, orange);
+    cursor: grab;
+}
+
+@keyframes dropMove {
+    0%{margin-top: 0%;}
+    50% {margin-top: 50%;}
+    75% {margin-bottom: 50%;}
+    100% {margin-bottom: 50%;}
+}
+
+#droppingMove:hover {
+    border: solid 2px;
+    padding: 1px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 600px;
+    cursor: crosshair;
+    background-color: black;
+}
+
+
